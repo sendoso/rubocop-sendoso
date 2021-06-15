@@ -1,0 +1,34 @@
+AllCops:
+  TargetRubyVersion: 2.6.6
+  TargetRailsVersion: 5.2.5
+  StyleGuideBaseURL: https://rubystyle.guide
+  Exclude:
+    - 'bin/**/*'
+    - 'db/**/*'
+    - 'node_modules/**/*'
+    - '**/vendor/**/*'
+    - '**/vendor/**/.*'
+    - '.git/**/*'
+    - '**/schema.rb'
+
+  DefaultFormatter: progress
+  DisplayCopNames: true
+  ExtraDetails: true
+  # Disable new cops by default since they'll cause noise on version upgrades.
+  # We can always enable them later.
+  NewCops: disable
+
+Rails:
+  Enabled: true
+
+require:
+  - rubocop-rspec
+  - rubocop-rails
+
+inherit_from:
+  - rubocop-ruby.yml
+  - rubocop-rspec.yml
+  - rubocop-rails.yml
+
+Style/Documentation:
+  Enabled: false
