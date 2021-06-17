@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    sendoso-rubocop (0.1.0)
+    rubocop-sendoso (0.1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -56,7 +56,7 @@ DEPENDENCIES
   rubocop
   rubocop-rails
   rubocop-rspec
-  sendoso-rubocop!
+  rubocop-sendoso!
 
 BUNDLED WITH
    2.2.19

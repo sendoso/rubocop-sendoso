@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module Sendoso
-  module Rubocop
+module Rubocop
+  module Sendoso
     VERSION = '0.1.0'
   end
 end
