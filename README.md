@@ -4,11 +4,12 @@ This repository provides recommended Rubocop configuration for use on Sendoso Ru
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add this line to your application's Gemfile replacing the `tag` value with the most recent Github
+tag:
 
 ```ruby
 group :development do
-  gem 'rubocop-sendoso', require: false, github: 'sendoso/rubocop-sendoso'
+  gem 'rubocop-sendoso', github: 'sendoso/rubocop-sendoso', tag: 'vx.x.x', require: false
 end
 ```
 
@@ -23,6 +24,6 @@ First create a new file called `.rubocop.yml` in your root directory if it doesn
 and add the following to the top of `.rubocop.yml`
 ```
 inherit_gem:
-  rubocop-sendoso: default.yml
+  rubocop-sendoso: config/default.yml
 ```
 
