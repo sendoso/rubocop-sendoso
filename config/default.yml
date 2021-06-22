@@ -1,7 +1,5 @@
+
 AllCops:
-  TargetRubyVersion: 2.6.6
-  TargetRailsVersion: 5.2.5
-  StyleGuideBaseURL: https://rubystyle.guide
   Exclude:
     - 'bin/**/*'
     - 'db/**/*'
@@ -17,6 +15,7 @@ AllCops:
   # Disable new cops by default since they'll cause noise on version upgrades.
   # We can always enable them later.
   NewCops: disable
+  SuggestExtensions: false
 
 Rails:
   Enabled: true
@@ -26,9 +25,10 @@ require:
   - rubocop-rails
 
 inherit_from:
-  - rubocop-ruby.yml
+  - rubocop-layout.yml
+  - rubocop-lint.yml
+  - rubocop-metrics.yml
   - rubocop-rspec.yml
   - rubocop-rails.yml
+  - rubocop-style.yml
 
-Style/Documentation:
-  Enabled: false

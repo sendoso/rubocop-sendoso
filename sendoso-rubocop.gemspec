@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Sendoso']
   spec.email         = ['engineering@sendoso.com']
 
-  spec.summary       = 'Quick install of ruby Sendoso code style rules'
-  spec.description   = 'Provides Ruby, Rails, and RSpec rubocop rules.'
-  spec.homepage      = 'https://github.com/sendoso/sendoso-rubocop'
+  spec.summary       = 'RuboCop Sendoso'
+  spec.description   = 'Code style checking for Sendoso Ruby repositories'
+  spec.homepage      = 'https://github.com/sendoso/rubocop-sendoso'
   spec.license       = 'MIT'
   spec.required_ruby_version = '>= 2.6.6'
 
@@ -18,17 +18,13 @@ Gem::Specification.new do |spec|
   spec.metadata['source_code_uri'] = 'https://github.com/sendoso/rubocop-sendoso'
   spec.metadata['changelog_uri'] = 'https://github.com/sendoso/rubocop-sendoso'
 
-  # Specify which files should be added to the gem when it is released.
-  # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
-  spec.files = Dir.chdir(File.expand_path(__dir__)) do
-    `git ls-files -z`.split("\x0").reject { |f| f.match(%r{\A(?:test|spec|features)/}) }
-  end
-  spec.bindir        = 'exe'
-  spec.executables   = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
+  spec.files = Dir['README.md', 'STYLEGUIDE.md', 'LICENSE', 'config/*.yml', 'lib/**/*.rb']
   spec.require_paths = ['lib']
 
-  # Uncomment to register a new dependency of your gem
-  # spec.add_dependency 'example-gem', '~> 1.0'
+  # Gem dependencies
+  spec.add_dependency('rubocop', '~> 1.17')
+  spec.add_dependency('rubocop-rails', '~> 2.11')
+  spec.add_dependency('rubocop-rspec', '~> 2.4')
 
   # For more information and examples about making a new gem, checkout our
   # guide at: https://bundler.io/guides/creating_gem.html

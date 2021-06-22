@@ -1,0 +1,106 @@
+Style/AndOr:
+  Description: Use &&/|| instead of and/or.
+  Enabled: true
+  EnforcedStyle: always
+  SupportedStyles:
+  - always
+  - conditionals
+
+Style/ClassAndModuleChildren:
+  Description: Checks the style of children definitions at classes and modules.
+  Enabled: true
+  EnforcedStyle: nested
+
+Style/ColonMethodCall:
+  Description: Checks for methods invoked via the operator instead of the . operator
+  Enabled: true
+
+Style/DefWithParentheses:
+  Description: Checks for parentheses in the definition of a method, that does not take any
+    arguments.
+  Enabled: true
+
+Style/FrozenStringLiteralComment:
+  Description: Add the frozen_string_literal comment to the top of files to help transition
+    from Ruby 2.3.0 to Ruby 3.0.
+  Enabled: false
+  EnforcedStyle: always
+  SupportedStyles:
+  - always
+  - always_true
+  - never
+
+Style/HashSyntax:
+  Description: Checks hash literal syntax
+  Enabled: true
+  EnforcedStyle: ruby19
+  UseHashRocketsWithSymbolValues: false
+  PreferHashRocketsForNonAlnumEndingSymbols: false
+  SupportedStyles:
+  - ruby19
+  - hash_rockets
+  - no_mixed_keys
+  - ruby19_no_mixed_keys
+
+Style/MethodDefParentheses:
+  Description: Checks if the method definitions have or don't have parentheses.
+  Enabled: true
+  EnforcedStyle: require_parentheses
+  SupportedStyles:
+  - require_parentheses
+  - require_no_parentheses
+  - require_no_parentheses_except_multiline
+
+Style/NumericLiterals:
+  Description: Checks for big numeric literals without _ between groups of digits in them
+  Enabled: false
+
+Style/ParenthesesAroundCondition:
+  Description: Checks for the presence of superfluous parentheses around the condition of
+    if/unless/while/until.
+  Enabled: true
+  AllowSafeAssignment: true
+  AllowInMultilineConditions: false
+
+Style/RedundantBegin:
+  Description: Checks for redundant begin blocks.
+  Enabled: true
+
+Style/RedundantFreeze:
+  Description: Checks usages of Object#freeze on immutable objects.
+  Enabled: true
+
+Style/RedundantPercentQ:
+  Description: Checks for %q/%Q when single quotes or double quotes would do.
+  Enabled: true
+
+Style/RedundantReturn:
+  Description: Checks for redundant return expressions.
+  Enabled: true
+  AllowMultipleReturnValues: true
+
+Style/RegexpLiteral:
+  Description: Use / or %r around regular expressions.
+  Enabled: true
+  EnforcedStyle: slashes
+  AllowInnerSlashes: false
+  SupportedStyles:
+  - slashes
+  - percent_r
+  - mixed
+
+Style/Semicolon:
+  Description: Checks for multiple expressions placed on the same line. It also checks for lines
+    terminated with a semicolon.
+  Enabled: true
+  AllowAsExpressionSeparator: true
+
+Style/TrivialAccessors:
+  Description: Checks for trivial reader/writer methods, that c`ould have been created with the
+    attr_* family of functions automatically.
+  Enabled: true
+  ExactNameMatch: true
+  AllowPredicates: true
+  AllowDSLWriters: true
+  IgnoreClassMethods: false
+
