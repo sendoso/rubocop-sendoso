@@ -23,5 +23,6 @@ Rails/IndexWith:
   Enabled: true
 
 Rails/SkipsModelValidations:
-  Description: Checks for the use of methods which skip validations.
-  Enabled: false
+  Description: This cop checks for the use of methods which skip validations which are listed in
+    guides.rubyonrails.org/active_record_validations.html#skipping-validations
+  Enabled: true
