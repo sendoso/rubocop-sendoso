@@ -95,6 +95,12 @@ Style/Semicolon:
   Enabled: true
   AllowAsExpressionSeparator: true
 
+Style/StringLiterals:
+  Description: Checks if uses of quotes match the configured preference.
+  Enabled: true
+  EnforcedStyle: single_quotes
+  ConsistentQuotesInMultiline: true
+
 Style/TrivialAccessors:
   Description: Checks for trivial reader/writer methods, that c`ould have been created with the
     attr_* family of functions automatically.
