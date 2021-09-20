@@ -47,6 +47,6 @@ workflows:
       - publish_gem:
           filters:
             branches:
-              ignore: /.*/
+              only: master
             tags:
               only: /^v.*/
