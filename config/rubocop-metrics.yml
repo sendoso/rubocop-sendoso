@@ -9,3 +9,6 @@ Metrics/BlockLength:
 Metrics/MethodLength:
   Description: Checks if the length of a method exceeds some maximum value.
   Enabled: false
+
+Metrics/ParameterLists:
+  CountKeywordArgs: false
