@@ -101,6 +101,11 @@ Style/StringLiterals:
   EnforcedStyle: single_quotes
   ConsistentQuotesInMultiline: true
 
+Style/TrailingCommaInHashLiteral:
+  Description: Checks for trailing comma in hash literals
+  Enabled: true
+  EnforcedStyleForMultiline: consistent_comma
+
 Style/TrivialAccessors:
   Description: Checks for trivial reader/writer methods, that c`ould have been created with the
     attr_* family of functions automatically.
