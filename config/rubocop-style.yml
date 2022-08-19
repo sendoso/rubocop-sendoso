@@ -101,6 +101,11 @@ Style/StringLiterals:
   EnforcedStyle: single_quotes
   ConsistentQuotesInMultiline: true
 
+Style/TrailingCommaInArrayLiteral:
+  Description: Checks for trailing comma in array literals
+  Enabled: true
+  EnforcedStyleForMultiline: consistent_comma
+
 Style/TrailingCommaInHashLiteral:
   Description: Checks for trailing comma in hash literals
   Enabled: true
