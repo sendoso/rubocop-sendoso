@@ -26,3 +26,6 @@ Rails/SkipsModelValidations:
   Description: This cop checks for the use of methods which skip validations which are listed in
     guides.rubyonrails.org/active_record_validations.html#skipping-validations
   Enabled: true
+  Exclude:
+    - spec/**/*
+    - db/data/**/*
