@@ -16,6 +16,12 @@ Lint/ErbNewArguments:
   Description: Emulates warnings in Ruby 2.6
   Enabled: true
 
+Lint/MissingSuper:
+  Description: Checks for the presence of constructors and lifecycle callbacks without calls to ‘super`.
+  Enabled: true
+  Exclude:
+    - app/services/**/*
+
 Lint/RedundantStringCoercion:
   Description: Checks for Object#to_s usage in string interpolation.
   Enabled: true
