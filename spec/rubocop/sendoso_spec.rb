@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe Rubocop::Sendoso do
-  it 'has a version number' do
+  it "has a version number" do
     expect(Rubocop::Sendoso::VERSION).not_to be nil
   end
 end

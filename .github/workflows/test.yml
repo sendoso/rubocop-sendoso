@@ -2,9 +2,9 @@ name: Rubocop + RSpec
 on:
   push:
     branches:
-      - '**'
+      - "**"
     tags-ignore:
-      - 'v*'
+      - "v*"
 
 env:
   BUNDLE_RUBYGEMS__PKG__GITHUB__COM: ${{secrets.GPR_READONLY_TOKEN}}
@@ -15,7 +15,7 @@ jobs:
 
     strategy:
       matrix:
-        ruby-version: ['3.1', '3.0', '2.7', '2.6']
+        ruby-version: ["3.1", "3.0", "2.7", "2.6"]
 
     steps:
       - uses: actions/checkout@v3

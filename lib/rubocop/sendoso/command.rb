@@ -1,6 +1,6 @@
-require 'thor'
+require "thor"
 
-require 'rubocop/sendoso'
+require "rubocop/sendoso"
 
 module Rubocop
   module Sendoso
@@ -12,14 +12,14 @@ module Rubocop
         true
       end
 
-      desc 'version', 'Get the version of rubocop-sendoso'
-      option :plain, type: :boolean, default: false, aliases: ['-p']
+      desc "version", "Get the version of rubocop-sendoso"
+      option :plain, type: :boolean, default: false, aliases: ["-p"]
       def version
         return puts Rubocop::Sendoso::VERSION if options[:plain]
 
         puts "rubocop-sendoso version: #{Rubocop::Sendoso::VERSION}"
       end
-      map ['-v', '--version'] => :version
+      map ["-v", "--version"] => :version
     end
   end
 end

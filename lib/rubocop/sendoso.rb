@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative 'sendoso/version'
+require_relative "sendoso/version"
 
 module Rubocop
   module Sendoso

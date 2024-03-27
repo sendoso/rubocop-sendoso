@@ -42,10 +42,10 @@
 
     ```ruby
     case
-    when song.name == 'Misty'
-      puts 'Not again!'
+    when song.name == "Misty"
+      puts "Not again!"
     when song.duration > 120
-      puts 'Too long!'
+      puts "Too long!"
     when Time.now.hour > 21
       puts "It's too late"
     else
@@ -53,12 +53,12 @@
     end
 
     kind = case year
-           when 1850..1889 then 'Blues'
-           when 1890..1909 then 'Ragtime'
-           when 1910..1929 then 'New Orleans Jazz'
-           when 1930..1939 then 'Swing'
-           when 1940..1950 then 'Bebop'
-           else 'Jazz'
+           when 1850..1889 then "Blues"
+           when 1890..1909 then "Ragtime"
+           when 1910..1929 then "New Orleans Jazz"
+           when 1930..1939 then "Swing"
+           when 1940..1950 then "Bebop"
+           else "Jazz"
            end
     ```
 
@@ -140,7 +140,7 @@
     ```ruby
     sum = 1 + 2
     a, b = 1, 2
-    1 > 2 ? true : false; puts 'Hi'
+    1 > 2 ? true : false; puts "Hi"
     [1, 2, 3].each { |e| puts e }
     ```
 
@@ -509,10 +509,10 @@ Thus when you create a TODO, it is almost always your name that is given.
 
     ```ruby
     # okay
-    render(:partial => 'foo')
+    render(:partial => "foo")
 
     # okay
-    render :partial => 'foo'
+    render :partial => "foo"
     ```
 
 In either case:
@@ -523,10 +523,10 @@ In either case:
 
     ```ruby
     # bad
-    get '/v1/reservations', { :id => 54875 }
+    get "/v1/reservations", { :id => 54875 }
 
     # good
-    get '/v1/reservations', :id => 54875
+    get "/v1/reservations", :id => 54875
     ```
 
 ## Conditional Expressions
@@ -604,16 +604,16 @@ In either case:
     ```ruby
     # bad
     unless success?
-      puts 'failure'
+      puts "failure"
     else
-      puts 'success'
+      puts "success"
     end
 
     # good
     if success?
-      puts 'success'
+      puts "success"
     else
-      puts 'failure'
+      puts "failure"
     end
     ```
 
@@ -833,13 +833,13 @@ In either case:
     # good
     names.each do |name|
       puts name
-      puts 'yay!'
+      puts "yay!"
     end
 
     # bad
     names.each { |name|
       puts name
-      puts 'yay!'
+      puts "yay!"
     }
 
     # good
@@ -883,16 +883,16 @@ In either case:
 
     ```ruby
     # bad
-    puts 'foobar'; # superfluous semicolon
-    puts 'foo'; puts 'bar' # two expressions on the same line
+    puts "foobar"; # superfluous semicolon
+    puts "foo"; puts "bar" # two expressions on the same line
 
     # good
-    puts 'foobar'
+    puts "foobar"
 
-    puts 'foo'
-    puts 'bar'
+    puts "foo"
+    puts "bar"
 
-    puts 'foo', 'bar' # this applies to puts in particular
+    puts "foo", "bar" # this applies to puts in particular
     ```
 
 * <a name="colon-use"></a>Use :: only to reference constants(this includes
@@ -953,7 +953,7 @@ In either case:
 
     ```ruby
     # set name to Bozhidar, only if it's nil or false
-    name ||= 'Bozhidar'
+    name ||= "Bozhidar"
     ```
 
 * <a name="no-double-pipes-for-bools"></a>Don't use `||=` to initialize boolean
@@ -1035,9 +1035,9 @@ In either case:
     ```ruby
     # bad
     class Color
-      RED = 'red'
-      BLUE = 'blue'
-      GREEN = 'green'
+      RED = "red"
+      BLUE = "blue"
+      GREEN = "green"
 
       ALL_COLORS = [
         RED,
@@ -1054,9 +1054,9 @@ In either case:
 
     # good
     class Color
-      RED = 'red'.freeze
-      BLUE = 'blue'.freeze
-      GREEN = 'green'.freeze
+      RED = "red".freeze
+      BLUE = "blue".freeze
+      GREEN = "green".freeze
 
       ALL_COLORS = [
         RED,
@@ -1098,8 +1098,8 @@ In either case:
     <sup>[[link](#throwaway-variables)]</sup>
 
     ```ruby
-    version = '3.2.1'
-    major_version, minor_version, _ = version.split('.')
+    version = "3.2.1"
+    major_version, minor_version, _ = version.split(".")
     ```
 
 ## Classes
@@ -1110,7 +1110,7 @@ In either case:
 
     ```ruby
     class Parent
-      @@class_var = 'parent'
+      @@class_var = "parent"
 
       def self.print_class_var
         puts @@class_var
@@ -1118,7 +1118,7 @@ In either case:
     end
 
     class Child < Parent
-      @@class_var = 'child'
+      @@class_var = "child"
     end
 
     Parent.print_class_var # => will print "child"
@@ -1248,10 +1248,10 @@ In either case:
 
     ```ruby
     # bad
-    raise RuntimeError, 'message'
+    raise RuntimeError, "message"
 
     # better - RuntimeError is implicit here
-    raise 'message'
+    raise "message"
 
     # best
     class MyExplicitError < RuntimeError; end
@@ -1266,12 +1266,12 @@ In either case:
 
     ```Ruby
     # bad
-    raise SomeException.new('message')
-    # Note that there is no way to do `raise SomeException.new('message'), backtrace`.
+    raise SomeException.new("message")
+    # Note that there is no way to do `raise SomeException.new("message"), backtrace`.
 
     # good
-    raise SomeException, 'message'
-    # Consistent with `raise SomeException, 'message', backtrace`.
+    raise SomeException, "message"
+    # Consistent with `raise SomeException, "message", backtrace`.
     ```
 
 
@@ -1328,12 +1328,12 @@ In either case:
 
     ```ruby
     # bad
-    %w(one two three) * ', '
-    # => 'one, two, three'
+    %w(one two three) * ", "
+    # => "one, two, three"
 
     # good
-    %w(one two three).join(', ')
-    # => 'one, two, three'
+    %w(one two three).join(", ")
+    # => "one, two, three"
     ```
 
 * <a name="symbol-keys"></a>Use symbols instead of strings as hash keys.
@@ -1341,7 +1341,7 @@ In either case:
 
     ```ruby
     # bad
-    hash = { 'one' => 1, 'two' => 2, 'three' => 3 }
+    hash = { "one" => 1, "two" => 2, "three" => 3 }
 
     # good
     hash = { :one => 1, :two => 2, :three => 3 }
@@ -1380,7 +1380,7 @@ In either case:
 
     ```ruby
     hash = {
-      :protocol => 'https',
+      :protocol => "https",
       :only_path => false,
       :controller => :users,
       :action => :set_password,
@@ -1412,7 +1412,7 @@ In either case:
 
     ```ruby
     # bad
-    email_with_name = user.name + ' <' + user.email + '>'
+    email_with_name = user.name + " <" + user.email + ">"
 
     # good
     email_with_name = "#{user.name} <#{user.email}>"
@@ -1422,7 +1422,7 @@ In either case:
   composing cache keys like this:
 
     ```ruby
-    CACHE_KEY = '_store'
+    CACHE_KEY = "_store"
 
     cache.write(@user.id + CACHE_KEY)
     ```
@@ -1430,7 +1430,7 @@ In either case:
     Prefer string interpolation instead of string concatenation:
 
     ```ruby
-    CACHE_KEY = '%d_store'
+    CACHE_KEY = "%d_store"
 
     cache.write(CACHE_KEY % @user.id)
     ```
@@ -1442,8 +1442,8 @@ In either case:
 
     ```ruby
     # good and also fast
-    story = ''
-    story << 'The Ugly Duckling'
+    story = ""
+    story << "The Ugly Duckling"
 
     paragraphs.each do |paragraph|
       story << paragraph
@@ -1539,7 +1539,7 @@ In either case:
     ```ruby
     # bad - no interpolation needed
     %(Welcome, Jane!)
-    # should be 'Welcome, Jane!'
+    # should be "Welcome, Jane!"
 
     # bad - no double-quotes
     %(This is #{quality} style)
@@ -1554,7 +1554,7 @@ In either case:
     ```
 
 * <a name="percent-r"></a>Use `%r` only for regular expressions matching *more
-    than* one '/' character.<sup>[[link](#percent-r)]</sup>
+    than* one "/" character.<sup>[[link](#percent-r)]</sup>
 
     ```ruby
     # bad
@@ -1589,18 +1589,18 @@ In either case:
 
     ```ruby
     # bad
-    render :text => 'Howdy' and return
+    render :text => "Howdy" and return
 
     # good
-    render :text => 'Howdy'
+    render :text => "Howdy"
     return
 
     # still bad
-    render :text => 'Howdy' and return if foo.present?
+    render :text => "Howdy" and return if foo.present?
 
     # good
     if foo.present?
-      render :text => 'Howdy'
+      render :text => "Howdy"
       return
     end
     ```
