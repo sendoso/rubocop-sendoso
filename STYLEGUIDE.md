@@ -1628,7 +1628,7 @@ In either case:
 > too.
 
 > The point of having style guidelines is to have a common vocabulary of coding
-> so people can concentrate on what you"re saying rather than on how you"re
+> so people can concentrate on what you're saying rather than on how you're
 > saying it. We present global style rules here so people know the vocabulary,
 > but local style is also important. If code you add to a file looks
 > drastically different from the existing code around it, it throws readers out

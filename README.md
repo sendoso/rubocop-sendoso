@@ -65,7 +65,7 @@ important that the tag you create be named properly.
 > * v1.0.0
 
 Sendoso uses [semantic versioning](https://semver.org/) to version gems (`<major>.<minor>.<patch>`).
-The rule of them for incrementing versions is as follows:
+The rule of thumb for incrementing versions is as follows:
 
 | Version Bump | Description |
 | ---- | ---- |
