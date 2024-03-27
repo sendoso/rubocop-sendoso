@@ -18,7 +18,7 @@ jobs:
           ruby-version: 3.1
           bundler-cache: true
 
-      - name: 'Setup Gem Credentials'
+      - name: "Setup Gem Credentials"
         run: |
           mkdir -p $HOME/.gem
           touch $HOME/.gem/credentials
@@ -27,7 +27,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GPR_WRITEONLY_TOKEN }}
 
-      - name: 'Publish Gem'
+      - name: "Publish Gem"
         run: |
           bundle exec gem bump -v ${RELEASE_TAG#"v"} --no-commit
 

@@ -1,13 +1,13 @@
 
 AllCops:
   Exclude:
-    - 'bin/**/*'
-    - 'db/**/*'
-    - 'node_modules/**/*'
-    - '**/vendor/**/*'
-    - '**/vendor/**/.*'
-    - '.git/**/*'
-    - '**/schema.rb'
+    - "bin/**/*"
+    - "db/**/*"
+    - "node_modules/**/*"
+    - "**/vendor/**/*"
+    - "**/vendor/**/.*"
+    - ".git/**/*"
+    - "**/schema.rb"
 
   DefaultFormatter: progress
   DisplayCopNames: true
