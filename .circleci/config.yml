@@ -27,7 +27,7 @@ commands:
       - run:
           name: Delete Github Registry credentials
           command: shred -u ~/.gem/credentials
-          when: always
+          when: true
 
 jobs:
   publish_gem:
