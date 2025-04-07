@@ -3,6 +3,7 @@ on:
   release:
     types:
       - released
+      - prereleased
 
 env:
   BUNDLE_RUBYGEMS__PKG__GITHUB__COM: ${{secrets.GPR_READONLY_TOKEN}}
