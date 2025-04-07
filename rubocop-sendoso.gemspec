@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description   = "Code style checking for Sendoso Ruby repositories"
   spec.homepage      = "https://github.com/sendoso/rubocop-sendoso"
   spec.license       = "MIT"
-  spec.required_ruby_version = ">= 2.6.6"
+  spec.required_ruby_version = ">= 3.1.0"
 
   spec.metadata["allowed_push_host"] = "https://rubygems.pkg.github.com/sendoso"
 
