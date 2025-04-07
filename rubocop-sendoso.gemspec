@@ -25,7 +25,7 @@ Gem::Specification.new do |spec|
 
   # Gem dependencies
   spec.add_dependency("rubocop", "~> 1.17")
-  spec.add_dependency("rubocop-rails", "~> 2.11")
+  spec.add_dependency("rubocop-rails", "~> 2.27")
   spec.add_dependency("rubocop-rspec", "~> 2.4")
 
   # For more information and examples about making a new gem, checkout our
