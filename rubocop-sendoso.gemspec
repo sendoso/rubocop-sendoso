@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description   = "Code style checking for Sendoso Ruby repositories"
   spec.homepage      = "https://github.com/sendoso/rubocop-sendoso"
   spec.license       = "MIT"
-  spec.required_ruby_version = ">= 2.6.6"
+  spec.required_ruby_version = ">= 3.1.6"
 
   spec.metadata["allowed_push_host"] = "https://rubygems.pkg.github.com/sendoso"
 
@@ -24,9 +24,9 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   # Gem dependencies
-  spec.add_dependency("rubocop", "~> 1.17")
-  spec.add_dependency("rubocop-rails", "~> 2.11")
-  spec.add_dependency("rubocop-rspec", "~> 2.4")
+  spec.add_dependency("rubocop", "~> 1.75.2")
+  spec.add_dependency("rubocop-rails", "~> 2.31.0")
+  spec.add_dependency("rubocop-rspec", "~> 3.5.0")
 
   # For more information and examples about making a new gem, checkout our
   # guide at: https://bundler.io/guides/creating_gem.html
