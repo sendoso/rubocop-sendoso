@@ -13,3 +13,7 @@
 
 ### Security
 - Updated rubocop-rails dependency to ~> 2.27 to address Rack security vulnerabilities (CVE-2025-27610, CVE-2025-25184, CVE-2025-27111)
+
+## [1.0.1] - 2025-04-08
+### Fixed
+- Updated RuboCop configuration to use `plugins` instead of `require` for rubocop-rspec and rubocop-rails extensions
